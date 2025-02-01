@@ -170,9 +170,10 @@ const jwt = require('jsonwebtoken'); // Importing jsonwebtoken for handling JWT
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'frontend-l1ti.vercel.app'],
     credentials: true
 }));
+
 
 app.use(express.json());
 app.use(cookieParser());  // To read cookies sent by the client
